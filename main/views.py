@@ -20,6 +20,7 @@ def Make(request):
             NewUrl.short_url = a
             NewUrl.link = "http://127.0.0.1:8000/" + a
             NewUrl.save()
+            
 
         else:
             form = UrlForm()
