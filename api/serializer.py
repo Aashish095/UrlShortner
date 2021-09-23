@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import short_urls
+from main.models import short_urls
 
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
