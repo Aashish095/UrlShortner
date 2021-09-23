@@ -20,5 +20,12 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Make,name="Make new"),
-    path("<str:token>", views.Home, name="Home")
+    path("<str:token>/", views.Home, name="Home"),
+    path('api/',views.apioverview,name='api-overview'),
+    path('task-list/',views.taskList,name='task-list'),
+    path('task-details/<str:pk>/',views.taskDetail,name='task-details'),
+    path('task-create/',views.taskCreate,name='task-create'),
+    path('task-update/<str:pk>/',views.taskUpdate,name='task-update'),
+    path('task-delete/<str:pk>/',views.taskDelete,name='task-delete'),
+
 ]
